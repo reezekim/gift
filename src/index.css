@@ -9,11 +9,34 @@
   unicode-range: U+AC00-D7A3; /* 한글 */
 }
 
+/* Universal tags*/
+* {
+  box-sizing: border-box;
+}
+
 body {
-  margin: 0;
   font-family: "CabinetGrotesk-Variable", "IBMPlexSansKR-Regular", sans-serif;
+  margin: 0;
+  cursor: default;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
 }
 
 code {
