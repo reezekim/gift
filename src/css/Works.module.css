@@ -1,0 +1,64 @@
+/* Category */
+.category {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 3.8rem;
+  position: relative;
+  /* background-color: blue; */
+}
+
+.list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 1.4rem;
+}
+
+.hr {
+  display: flex;
+  width: 100%;
+  height: 2px;
+  border-bottom-width: 2px soild black;
+}
+
+.button {
+  position: relative;
+  padding: 0 23px;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #cbcbcb;
+  text-decoration: none;
+  letter-spacing: 0;
+}
+
+.button.selected,
+.button:hover {
+  color: black;
+}
+
+.button.active .count,
+.button:hover .count {
+  opacity: 1;
+  top: 0;
+}
+
+.count {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: -5px;
+  right: 2px;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  font-size: 0.75em;
+  line-height: 16px;
+  opacity: 0;
+  transition: all 300ms;
+}
+
+/* Works */
+/* .work {
+} */
