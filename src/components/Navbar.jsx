@@ -3,8 +3,16 @@ import styles from "../css/Navbar.module.css";
 import { Link } from "react-router-dom";
 // import { BiGift } from "react-icons/bi";
 import { IoGiftSharp, IoMenu } from "react-icons/io5";
+// import { useRef } from "react";
 
 export default function Navbar() {
+  // const navbar = document.querySelector("#navbar");
+  // const navHeight = navbar.getBoundingClientRect().height;
+  // document.addEventListener("scroll", () => {
+  //   console.log(window.scrollY);
+  //   console.log(navHeight);
+  // });
+
   return (
     <header id={styles.navbar}>
       <button className={styles.toggle}>
