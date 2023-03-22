@@ -1,17 +1,13 @@
 import React from "react";
 import styles from "../css/Navbar.module.css";
 import { Link } from "react-router-dom";
-// import { BiGift } from "react-icons/bi";
 import { IoGiftSharp, IoMenu } from "react-icons/io5";
-// import { useRef } from "react";
+import { MdLibraryAdd } from "react-icons/md";
+import { TiLockClosed, TiLockOpen } from "react-icons/ti";
+import { useAuthContext } from "../context/AuthContext";
 
 export default function Navbar() {
-  // const navbar = document.querySelector("#navbar");
-  // const navHeight = navbar.getBoundingClientRect().height;
-  // document.addEventListener("scroll", () => {
-  //   console.log(window.scrollY);
-  //   console.log(navHeight);
-  // });
+  const { user, login, logout } = useAuthContext();
 
   return (
     <header id={styles.navbar}>
@@ -35,6 +31,21 @@ export default function Navbar() {
         <a href="#" className={styles.item} data-link="#Contact">
           Contact
         </a>
+        {!user && (
+          <button onClick={login} className={styles.item}>
+            <TiLockClosed />
+          </button>
+        )}
+        {user && (
+          <button onClick={logout} className={styles.item}>
+            <TiLockOpen />
+          </button>
+        )}
+        {user && user.isAdmin && (
+          <Link to="/works/new" className={styles.item}>
+            <MdLibraryAdd />
+          </Link>
+        )}
       </nav>
       <Link to="/" className={styles.logo} data-link="#home">
         <IoGiftSharp className={styles.icon} />
