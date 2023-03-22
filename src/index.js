@@ -9,6 +9,9 @@ import Home from './pages/Home';
 import AllWorks from './pages/AllWorks';
 import WorkDetail from './pages/WorkDetail';
 import About from './pages/About';
+import ProtectedRoute from './pages/ProtectedRoute';
+import NewWorks from './pages/NewWorks';
+// import NewWork from './pages/NewWorks';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +21,14 @@ const router = createBrowserRouter([
     children: [
       { index: true, path: '/', element: <Home /> },
       { path: '/works', element: <AllWorks /> },
+      {
+        path: '/works/new', 
+        element: (
+          <ProtectedRoute requireAdmin>
+            <NewWorks />
+          </ProtectedRoute>
+        ),
+      },
       { 
         path: '/works/:id', 
         element: <WorkDetail />, 
