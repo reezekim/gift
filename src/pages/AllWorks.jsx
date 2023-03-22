@@ -1,4 +1,5 @@
 import React from "react";
+import Works from "../components/Works";
 import styles from "../css/AllWorks.module.css";
 
 export default function AllWorks() {
@@ -8,6 +9,7 @@ export default function AllWorks() {
         <h1 className={styles.title}>All Projects</h1>
         {/* <p className={styles.desc}>총 4개의 프로젝트를 진행했습니다.</p> */}
       </div>
+      <Works />
     </section>
   );
 }

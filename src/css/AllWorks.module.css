@@ -7,9 +7,8 @@
 #works {
   display: flex;
   flex-direction: column;
-  background-color: green;
   padding-top: 240px;
-  /* background-color: transparent; */
+  background-color: transparent;
 }
 
 .intro {
