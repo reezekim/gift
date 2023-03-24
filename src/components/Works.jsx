@@ -1,10 +1,11 @@
+import { useQuery } from "@tanstack/react-query";
 import React from "react";
 import styles from "../css/Works.module.css";
-// import { useQuery } from "@tanstack/react-query";
-// import { getWorks } from "../api/firebase";
+import WorkCard from "./WorkCard";
+import { getWorks } from "../api/firebase";
 
 export default function Works() {
-  // const { isLoading, error, data: works } = useQuery(["works"], getWorks);
+  const { isLoading, error, data: works } = useQuery(["works"], getWorks);
 
   const handleClick = (e) => {
     const filter =
@@ -17,8 +18,8 @@ export default function Works() {
 
   return (
     <>
-      {/* {isLoading && <p>Loading...</p>}
-      {error && <p>{error}</p>} */}
+      {isLoading && <p>Loading...</p>}
+      {error && <p>{error}</p>}
       <div onClick={handleClick} className={styles.category}>
         <div className={styles.list}>
           <button
@@ -37,12 +38,12 @@ export default function Works() {
             Works<span className={styles.count}>0</span>
           </button>
         </div>
-        <hr className={styles.hr} />
+        <hr className={styles.divide} />
       </div>
 
-      {/* <ul className={styles.work}>
+      <ul className={styles.work}>
         {works && works.map((work) => <WorkCard key={work.id} work={work} />)}
-      </ul> */}
+      </ul>
     </>
   );
 }
