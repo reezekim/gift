@@ -41,7 +41,7 @@ export default function Works() {
         <hr className={styles.divide} />
       </div>
 
-      <ul className={styles.work}>
+      <ul>
         {works && works.map((work) => <WorkCard key={work.id} work={work} />)}
       </ul>
     </>

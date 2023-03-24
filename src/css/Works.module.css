@@ -2,8 +2,6 @@
 .category {
   display: flex;
   flex-direction: column;
-
-  margin-bottom: 3.8rem;
   position: relative;
   /* background-color: blue; */
 }
@@ -60,5 +58,7 @@
 }
 
 /* Works */
-/* .work {
-} */
+ul {
+  display: flex;
+  padding-bottom: 3.3em;
+}
