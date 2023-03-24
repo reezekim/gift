@@ -8,6 +8,8 @@
   font-style: normal;
   unicode-range: U+AC00-D7A3; /* 한글 */
 }
+/* reset css */
+@import "./css/reset.css";
 
 /* Universal tags*/
 * {
