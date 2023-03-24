@@ -19,6 +19,7 @@ export default function NewWorks() {
     }
     setWork((work) => ({ ...work, [name]: value }));
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // 제품의 사진을 클라우디너리에 업로드하고 URL을 획득
@@ -36,6 +37,7 @@ export default function NewWorks() {
       })
       .finally(() => setIsUploading(false));
   };
+
   return (
     <section id={styles.new} className={styles.section}>
       <h2 className={styles.title}>Add New Projects</h2>
