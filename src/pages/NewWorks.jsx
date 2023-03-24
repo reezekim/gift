@@ -8,7 +8,6 @@ export default function NewWorks() {
   const [file, setFile] = useState();
   const [isUploading, setIsUploading] = useState(false);
   const [success, setSuccess] = useState();
-  //   const { addWork } = useWorks();
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;
@@ -22,8 +21,6 @@ export default function NewWorks() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // 제품의 사진을 클라우디너리에 업로드하고 URL을 획득
-    // Firebase에 새로운 제품을 추가함
     setIsUploading(true);
     uploadImage(file) //
       .then((url) => {

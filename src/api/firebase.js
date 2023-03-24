@@ -20,7 +20,8 @@ export function login() {
    signInWithPopup(auth, provider)
    .then((result) => {
     const user = result.user;
-    console.log(`일반유저: ${user}`);
+    // console.log(`일반유저: ${user}`);
+    return user;
    })
    .catch(console.error);
 }
@@ -42,13 +43,12 @@ export function onUserStateChange(callback) {
         if (snapshot.exists()) {
           const admins = snapshot.val();
           const isAdmin = admins.includes(user.uid);
-          console.log(`어드민유저: ${isAdmin}`);
+          // console.log(`어드민유저: ${isAdmin}`);
           return {...user, isAdmin}
         }
         return user;
       });
     }
-
 
 export async function addNewWork(work, image){
   const id = uuid();
