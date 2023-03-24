@@ -1,13 +1,13 @@
 /* Section */
 .section {
   margin: 0 105px;
+  padding-top: 240px;
 }
 
 /* All Works */
 #works {
   display: flex;
   flex-direction: column;
-  padding-top: 240px;
   background-color: transparent;
 }
 
