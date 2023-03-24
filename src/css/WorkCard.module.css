@@ -1,0 +1,46 @@
+/* workCard */
+.card {
+  display: flex;
+  flex-direction: column;
+  margin: 52px 52px 0 52px;
+}
+
+.desc {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.title {
+    display: flex;
+    font-size: 1.48em;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: justify;
+    text-justify: inter-ideograph;
+    text-justify: inter-character;
+    letter-spacing: 0;
+    word-break: break-all;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.category {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 0.99em;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0;
+    margin-top: 3.6px;
+}
+
+.img {
+  display: flex;
+  width: 20rem;
+  margin: 23px 0 19px 0;
+    max-width: none;
+    pointer-events: none;
+}
